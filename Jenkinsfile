@@ -36,10 +36,8 @@ unstable{
 echo "This will run only if runwas marked as unstable"
 }
 changed{
-echo "This will run only if the state of the pipeline has
-changed"
-echo "For example pipeline was previously failing but now
-successful"
+echo "This will run only if the state of the pipeline has changed"
+echo "For example pipeline was previously failing but now successful"
 }
 }
 }
