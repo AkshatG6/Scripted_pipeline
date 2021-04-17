@@ -5,7 +5,7 @@ stage('Github') {
 steps{
 echo "Fetching script from Github";
 git changelog: false, credentialsId: 'ee9f90ec-fd6e-4535-9707-aff0c3a977e5', poll:
-false, url: 'https://github.com/KevinShahgit/JenkinsTest'
+false, url: 'https://github.com/AkshatG6/jenkins'
 }
 	}
 stage('Compile') {
