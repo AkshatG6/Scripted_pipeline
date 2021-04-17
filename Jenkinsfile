@@ -1,20 +1,20 @@
 pipeline{
-agent any
-stages{
-stage('compile'){
-steps{
-echo "Compiled Successfully!!";
-}
-}
-stage('JUnit'){
-steps{
-echo "JUnit Passed Successfully!!";
-}
-}
-stage('Quality-Gate'){
-steps{
-e c h o "So n a r Cu b e Qu a l i t y -Ga t e Pa s s e d Successfully!!";
-}
+	agent any
+	stages{
+		stage('compile'){
+			steps{
+				echo "Compiled Successfully!!";
+			}
+		}
+		stage('JUnit'){
+			steps{
+				echo "JUnit Passed Successfully!!";
+			}
+		}
+		stage('Quality-Gate'){
+			steps{
+			echo "Sonar Cube Quality-Gate Passed Successfully!!";
+		}
 	}
 stage('Deploy'){
 steps{
