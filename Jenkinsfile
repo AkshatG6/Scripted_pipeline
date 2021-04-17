@@ -1,41 +1,46 @@
-pipeline {
+pipeline{
 agent any
-stages {
-stage('Github') {
+stages{
+stage('compile'){
 steps{
-echo "Fetching script from Github";
-git changelog: false, credentialsId: 'ee9f90ec-fd6e-4535-9707-aff0c3a977e5', poll:
-false, url: 'https://github.com/AkshatG6/jenkins'
+echo "Compiled Successfully!!";
+}
+}
+stage('JUnit'){
+steps{
+echo "JUnit Passed Successfully!!";
+}
+}
+stage('Quality-Gate'){
+steps{
+e c h o "So n a r Cu b e Qu a l i t y -Ga t e Pa s s e d
+Successfully!!";
 }
 	}
-stage('Compile') {
+stage('Deploy'){
 steps{
-echo "This is the compile stage";
-bat 'javac Test.java'
-}
-}
-stage('Execute') {
-steps{
-echo "This is the execution stage";
-bat 'java Test'
+echo " Passed !!!";
 }
 }
 }
-post {
+post{
 always {
-echo "This will always run";
+echo "This will always run"
 }
 success {
-echo "This will run only if successfull";
+echo "This will run only if successful"
 }
 failure {
-echo "This will run when failed";
+echo "This will run only if fail"
 }
-unstable {
-echo "This will run when unstable";
+unstable{
+echo "This will run only if runwas marked as unstable"
 }
-changed {
-echo "This will run when there is change in builds";
+changed{
+echo "This will run only if the state of the pipeline has
+changed"
+echo "For example pipeline was previously failing but now
+successful"
 }
-	}
+}
 }
