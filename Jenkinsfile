@@ -13,8 +13,7 @@ echo "JUnit Passed Successfully!!";
 }
 stage('Quality-Gate'){
 steps{
-e c h o "So n a r Cu b e Qu a l i t y -Ga t e Pa s s e d
-Successfully!!";
+e c h o "So n a r Cu b e Qu a l i t y -Ga t e Pa s s e d Successfully!!";
 }
 	}
 stage('Deploy'){
